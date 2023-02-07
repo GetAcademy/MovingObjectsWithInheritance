@@ -1,7 +1,7 @@
 ﻿using MovingObjects;
 
 /*
- * pause til 10:32
+ * pause til 1
  *
  * interface - teknisk sett
  * "is a" vs "has a" - arv vs compositions
@@ -12,7 +12,7 @@
 var obj1 = new BouncingBall(15, 3, 1, 1);
 var obj2 = new TeleportingPlus(15, 3, 1, -1);
 var obj3 = new StandingT(10, 10);
-var objects = new IMovingObject[] { obj1, obj2, obj3 };
+var objects = new MovingObject[] { obj1, obj2, obj3 };
 
 Console.CursorVisible = false;
 while (true)

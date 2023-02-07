@@ -1,33 +1,37 @@
 ﻿namespace MovingObjects
 {
-    internal class BouncingBall : IMovingObject
+    internal class BouncingBall : MovingObject
     {
-        private int _col;
-        private int _row;
-        private int _speedCol;
-        private int _speedRow;
-
         public BouncingBall(int col, int row, int speedCol, int speedRow)
+            : base(col, row, speedCol, speedRow, 'O')
         {
-            _col = col;
-            _row = row;
-            _speedCol = speedCol;
-            _speedRow = speedRow;
         }
 
-        public void Show()
-        {
-            Console.CursorLeft = _col;
-            Console.CursorTop = _row;
-            Console.Write("O");
-        }
+        //public BouncingBall( int a, int b)
+        //{
+        //}
 
-        public void Move()
-        {
-            _col += _speedCol;
-            _row += _speedRow;
-            if (_col <= 0 || _col >= Console.WindowWidth - 1) _speedCol = -_speedCol;
-            if (_row <= 0 || _row >= Console.WindowHeight - 1) _speedRow = -_speedRow;
-        }
+        //public BouncingBall(int a)
+        // : this(a, 1)
+        //{
+        //}
+
+        //public void Move()
+        //{
+        //    _col += _speedCol;
+        //    _row += _speedRow;
+        //    if (_col <= 0 || _col >= Console.WindowWidth - 1) _speedCol = -_speedCol;
+        //    if (_row <= 0 || _row >= Console.WindowHeight - 1) _speedRow = -_speedRow;
+        //}
+
+        //public static int Add(int a, int b)
+        //{
+        //    return a + b;
+        //}
+
+        //public static int Add(int a)
+        //{
+        //    return Add(a, 1);
+        //}
     }
 }
