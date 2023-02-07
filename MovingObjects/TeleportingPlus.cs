@@ -1,18 +1,32 @@
 ﻿namespace MovingObjects
 {
-    internal class TeleportingPlus : MovingObject
+    internal class TeleportingPlus : MovableAndShowableObject
     {
         public TeleportingPlus(int col, int row, int speedCol, int speedRow)
-        :base(col, row, speedCol, speedRow, '+')
+        : base(col, row, speedCol, speedRow, '+')
         {
         }
 
-        //public void Move()
-        //{
-        //    var w= Console.WindowWidth;
-        //    var h = Console.WindowHeight;
-        //    _col = (_col + _speedCol + w) % w;
-        //    _row = (_row + _speedRow + h) % h;
-        //}
+        public override void Move()
+        {
+            base.Move();
+            if (_col < 0) _col = Console.WindowWidth;
+            if (_col > Console.WindowWidth) _col = 0;
+            if (_row < 0) _row = Console.WindowHeight;
+            if (_row > Console.WindowHeight) _col = 0;
+
+        }
     }
+
+    //class A : B
+    //{
+    //}
+
+    //class B : C
+    //{
+    //}
+
+    //class C
+    //{
+    //}
 }

@@ -1,13 +1,10 @@
 ﻿namespace MovingObjects
 {
-    internal class StandingT : MovingObject
+    internal class StandingT : ShowableObject
     {
         public StandingT(int col, int row)
-        :base(col, row, 0, 0, 'T')
+            : base(col, row, 'T')
         {
         }
-        //public void Move()
-        //{
-        //}
     }
 }
